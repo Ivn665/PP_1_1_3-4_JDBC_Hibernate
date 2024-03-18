@@ -22,7 +22,7 @@ public class Main {
 
             userService.removeUserById(1);
             List<User> userList = userService.getAllUsers();
-            userList.stream().forEach(System.out::println);
+            userList.forEach(System.out::println);
             userService.cleanUsersTable();
             userService.dropUsersTable();
 
