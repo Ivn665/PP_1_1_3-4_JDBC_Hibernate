@@ -11,7 +11,6 @@ public class UserDaoJDBCImpl implements UserDao {
 
     private final String TABLE_NAME = "USERS";
     private Connection connection = null;
-    private PreparedStatement preparedStatement = null;
 
     public UserDaoJDBCImpl() {
         //
@@ -21,7 +20,7 @@ public class UserDaoJDBCImpl implements UserDao {
     public void createUsersTable() throws SQLException {
 
         String sql = String.format("""
-                CREATE TABLE `%s` (
+                CREATE TABLE IF NOT EXISTS `%s` (
                 `id` bigint NOT NULL AUTO_INCREMENT,
                 `name` varchar(45) NOT NULL,
                 `lastName` varchar(45) NOT NULL,
@@ -30,16 +29,13 @@ public class UserDaoJDBCImpl implements UserDao {
                 UNIQUE KEY `id_UNIQUE` (`id`)
                 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb3
                 """, TABLE_NAME);
-        if (!ifExist()) {
             try {
                 connection = Util.getConnection();
-                preparedStatement = connection.prepareStatement(sql);
-                preparedStatement.executeUpdate();
+                Statement statement = connection.createStatement();
+                statement.executeUpdate(sql);
             } finally {
                 connection.close();
-                preparedStatement.close();
             }
-        }
     }
 
     @Override
@@ -48,11 +44,10 @@ public class UserDaoJDBCImpl implements UserDao {
         String sql = String.format("DROP TABLE IF EXISTS %s;", TABLE_NAME);
         try {
             connection = Util.getConnection();
-            preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.executeUpdate(sql);
+            Statement statement = connection.createStatement();
+            statement.executeUpdate(sql);
         } finally {
             connection.close();
-            preparedStatement.close();
         }
     }
 
@@ -62,14 +57,13 @@ public class UserDaoJDBCImpl implements UserDao {
         String sql = String.format("INSERT INTO %s (name, lastName, age) VALUES (?, ?, ?);", TABLE_NAME);
         try {
             connection = Util.getConnection();
-            preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, name);
-            preparedStatement.setString(2, lastName);
-            preparedStatement.setByte(3, age);
-            preparedStatement.executeUpdate();
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1, name);
+            statement.setString(2, lastName);
+            statement.setByte(3, age);
+            statement.executeUpdate();
         } finally {
             connection.close();
-            preparedStatement.close();
         }
     }
 
@@ -79,12 +73,11 @@ public class UserDaoJDBCImpl implements UserDao {
         String sql = String.format("DELETE FROM %s WHERE id = ?;", TABLE_NAME);
         try {
             connection = Util.getConnection();
-            preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setLong(1, id);
-            preparedStatement.executeUpdate();
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setLong(1, id);
+            statement.executeUpdate();
         } finally {
             connection.close();
-            preparedStatement.close();
         }
     }
 
@@ -95,8 +88,8 @@ public class UserDaoJDBCImpl implements UserDao {
         List<User> usersList = new ArrayList<>();
         try {
             connection = Util.getConnection();
-            preparedStatement = connection.prepareStatement(sql);
-            ResultSet resultSet = preparedStatement.executeQuery();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next()) {
                 User user = new User();
                 user.setId(resultSet.getLong("id"));
@@ -107,7 +100,6 @@ public class UserDaoJDBCImpl implements UserDao {
             }
         } finally {
             connection.close();
-            preparedStatement.close();
         }
         return usersList;
     }
@@ -118,23 +110,10 @@ public class UserDaoJDBCImpl implements UserDao {
         String sql = String.format("TRUNCATE %s", TABLE_NAME);
         try {
             connection = Util.getConnection();
-            preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.executeUpdate();
+            Statement statement = connection.createStatement();
+            statement.executeUpdate(sql);
         } finally {
             connection.close();
-            preparedStatement.close();
-        }
-    }
-
-    public boolean ifExist() throws SQLException {
-        String sql = String.format("SHOW TABLES LIKE '%s'", TABLE_NAME);
-        try {
-            connection = Util.getConnection();
-            preparedStatement = connection.prepareStatement(sql);
-            return preparedStatement.executeQuery().next();
-        } finally {
-            connection.close();
-            preparedStatement.close();
         }
     }
 }
