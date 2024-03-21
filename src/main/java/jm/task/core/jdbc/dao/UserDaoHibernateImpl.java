@@ -6,14 +6,12 @@ import jm.task.core.jdbc.util.Util;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.annotations.Entity;
 
-import javax.persistence.Table;
 import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
 
+    private static final String TABLE_NAME = "USERS";
     private static final SessionFactory SESSION_FACTORY = Util.getSessionFactory();
 
     public UserDaoHibernateImpl() {
@@ -31,7 +29,7 @@ public class UserDaoHibernateImpl implements UserDao {
                 PRIMARY KEY (`id`),
                 UNIQUE KEY `id_UNIQUE` (`id`)
                 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb3
-                """, Entity.class.getAnnotation(Table.class).name());
+                """, TABLE_NAME);
         try (Session session = SESSION_FACTORY.openSession()) {
             session.beginTransaction();
             session.createSQLQuery(sql).addEntity(User.class).executeUpdate();
@@ -44,8 +42,9 @@ public class UserDaoHibernateImpl implements UserDao {
 
     @Override
     public void dropUsersTable() throws HibernateException {
-        String sql = String.format("DROP TABLE IF EXISTS %s", Entity.class.getAnnotation(Table.class).name());
-        try (Session session = SESSION_FACTORY.openSession()) {
+
+        String sql = String.format("DROP TABLE IF EXISTS %s", TABLE_NAME);
+        try (Session session = SESSION_FACTORY.openSession()){
             session.beginTransaction();
             session.createSQLQuery(sql).addEntity(User.class).executeUpdate();
             session.getTransaction().commit();
@@ -57,7 +56,8 @@ public class UserDaoHibernateImpl implements UserDao {
 
     @Override
     public void saveUser(String name, String lastName, byte age) throws HibernateException {
-        try (Session session = SESSION_FACTORY.openSession()) {
+
+        try (Session session = SESSION_FACTORY.openSession()){
             User user = new User(name, lastName, age);
             session.beginTransaction();
             session.persist(user);
@@ -71,8 +71,7 @@ public class UserDaoHibernateImpl implements UserDao {
     @Override
     public void removeUserById(long id) throws HibernateException {
 
-        Transaction transaction = null;
-        try (Session session = SESSION_FACTORY.openSession()) {
+        try (Session session = SESSION_FACTORY.openSession()){
             User user = session.get(User.class, id);
             if (user == null) System.out.printf("Юзер с id = %d в базе данных не найден\n", id);
             session.beginTransaction();
@@ -99,8 +98,7 @@ public class UserDaoHibernateImpl implements UserDao {
     @Override
     public void cleanUsersTable() throws HibernateException {
 
-        Transaction transaction = null;
-        try (Session session = SESSION_FACTORY.openSession()) {
+        try (Session session = SESSION_FACTORY.openSession()){
             session.beginTransaction();
             session.createQuery("DELETE FROM User").executeUpdate();
             session.getTransaction().commit();
