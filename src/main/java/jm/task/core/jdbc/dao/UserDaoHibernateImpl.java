@@ -13,9 +13,7 @@ import java.util.List;
 public class UserDaoHibernateImpl implements UserDao {
 
     private static final String TABLE_NAME = "USERS";
-    private static final SessionFactory SESSIONFACTORY = Util.getSessionFactory();
-    private Session session = null;
-    private Transaction transaction = null;
+    private static final SessionFactory SESSION_FACTORY = Util.getSessionFactory();
 
     public UserDaoHibernateImpl() {
         //
@@ -33,39 +31,35 @@ public class UserDaoHibernateImpl implements UserDao {
                 UNIQUE KEY `id_UNIQUE` (`id`)
                 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb3
                 """, TABLE_NAME);
-        try {
-            session = SESSIONFACTORY.openSession();
+        Transaction transaction = null;
+        try (Session session = SESSION_FACTORY.openSession()) {
             transaction = session.beginTransaction();
             session.createSQLQuery(sql).addEntity(User.class).executeUpdate();
             transaction.commit();
         } catch (HibernateException e) {
             if (transaction != null) transaction.rollback();
             throw e;
-        } finally {
-            session.close();
         }
     }
 
     @Override
     public void dropUsersTable() throws HibernateException {
         String sql = String.format("DROP TABLE IF EXISTS %s", TABLE_NAME);
-        try {
-            session = SESSIONFACTORY.openSession();
+        Transaction transaction = null;
+        try (Session session = SESSION_FACTORY.openSession()){
             transaction = session.beginTransaction();
             session.createSQLQuery(sql).addEntity(User.class).executeUpdate();
             transaction.commit();
         } catch (HibernateException e) {
             if (transaction != null) transaction.rollback();
             throw e;
-        } finally {
-            session.close();
         }
     }
 
     @Override
     public void saveUser(String name, String lastName, byte age) throws HibernateException {
-        try {
-            session = SESSIONFACTORY.openSession();
+        Transaction transaction = null;
+        try (Session session = SESSION_FACTORY.openSession()){
             User user = new User(name, lastName, age);
             transaction = session.beginTransaction();
             session.persist(user);
@@ -73,16 +67,14 @@ public class UserDaoHibernateImpl implements UserDao {
         } catch (HibernateException e) {
             if (transaction != null) transaction.rollback();
             throw e;
-        } finally {
-            session.close();
         }
     }
 
     @Override
     public void removeUserById(long id) throws HibernateException {
 
-        try {
-            session = SESSIONFACTORY.openSession();
+        Transaction transaction = null;
+        try (Session session = SESSION_FACTORY.openSession()){
             User user = session.get(User.class, id);
             if (user == null) System.out.printf("Юзер с id = %d в базе данных не найден\n", id);
             transaction = session.beginTransaction();
@@ -91,8 +83,6 @@ public class UserDaoHibernateImpl implements UserDao {
         } catch (HibernateException e) {
             if (transaction != null) transaction.rollback();
             throw e;
-        } finally {
-            session.close();
         }
     }
 
@@ -100,11 +90,10 @@ public class UserDaoHibernateImpl implements UserDao {
     public List<User> getAllUsers() throws HibernateException {
 
         List<User> usersList;
-        try {
-            session = SESSIONFACTORY.openSession();
+        try (Session session = SESSION_FACTORY.openSession()) {
             usersList = session.createQuery("FROM User", User.class).list();
-        } finally {
-            session.close();
+        } catch (HibernateException e) {
+            throw e;
         }
         return usersList;
     }
@@ -112,16 +101,14 @@ public class UserDaoHibernateImpl implements UserDao {
     @Override
     public void cleanUsersTable() throws HibernateException {
 
-        try {
-            session = SESSIONFACTORY.openSession();
+        Transaction transaction = null;
+        try (Session session = SESSION_FACTORY.openSession()){
             transaction = session.beginTransaction();
             session.createQuery("DELETE FROM User").executeUpdate();
             transaction.commit();
         } catch (HibernateException e) {
             if (transaction != null) transaction.rollback();
             throw e;
-        } finally {
-            session.close();
         }
     }
 }
