@@ -6,12 +6,13 @@ import jm.task.core.jdbc.util.Util;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.metadata.ClassMetadata;
+import org.hibernate.persister.entity.AbstractEntityPersister;
 
 import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
 
-    private static final String TABLE_NAME = "USERS";
     private static final SessionFactory SESSION_FACTORY = Util.getSessionFactory();
 
     public UserDaoHibernateImpl() {
@@ -29,7 +30,7 @@ public class UserDaoHibernateImpl implements UserDao {
                 PRIMARY KEY (`id`),
                 UNIQUE KEY `id_UNIQUE` (`id`)
                 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb3
-                """, TABLE_NAME);
+                """, getTableName());
         try (Session session = SESSION_FACTORY.openSession()) {
             session.beginTransaction();
             session.createSQLQuery(sql).addEntity(User.class).executeUpdate();
@@ -43,7 +44,7 @@ public class UserDaoHibernateImpl implements UserDao {
     @Override
     public void dropUsersTable() throws HibernateException {
 
-        String sql = String.format("DROP TABLE IF EXISTS %s", TABLE_NAME);
+        String sql = String.format("DROP TABLE IF EXISTS %s", getTableName());
         try (Session session = SESSION_FACTORY.openSession()){
             session.beginTransaction();
             session.createSQLQuery(sql).addEntity(User.class).executeUpdate();
@@ -106,5 +107,11 @@ public class UserDaoHibernateImpl implements UserDao {
             SESSION_FACTORY.getCurrentSession().getTransaction().rollback();
             throw e;
         }
+    }
+
+    private static String getTableName() {
+        ClassMetadata hibernateMetadata = SESSION_FACTORY.getClassMetadata(User.class);
+        AbstractEntityPersister persister = (AbstractEntityPersister) hibernateMetadata;
+        return persister.getTableName();
     }
 }
