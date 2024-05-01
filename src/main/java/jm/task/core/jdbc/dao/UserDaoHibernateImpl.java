@@ -6,9 +6,8 @@ import jm.task.core.jdbc.util.Util;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.metadata.ClassMetadata;
-import org.hibernate.persister.entity.AbstractEntityPersister;
 
+import javax.persistence.Table;
 import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
@@ -110,8 +109,7 @@ public class UserDaoHibernateImpl implements UserDao {
     }
 
     private static String getTableName() {
-        ClassMetadata hibernateMetadata = SESSION_FACTORY.getClassMetadata(User.class);
-        AbstractEntityPersister persister = (AbstractEntityPersister) hibernateMetadata;
-        return persister.getTableName();
+        Table table = User.class.getAnnotation(Table.class);
+        return table.name();
     }
 }
