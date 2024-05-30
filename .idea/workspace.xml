@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8fa0a25c-b568-4548-8a40-24df8a60f13a" name="Changes" comment="30.05.2024" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="ivn665-Hibernate-theme" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Ivn665&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="cd1723be-7b3b-4ece-b0d7-cdd49ffdef73" />
+        <option name="url" value="https://github.com/KataAcademy/PP_1_1_3-4_JDBC_Hibernate.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2dm4pFjRUg88Dn5qXDGmWGbjd0t" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Debug",
+    "Application.Util.executor": "Run",
+    "JUnit.UserServiceTest.cleanUsersTable.executor": "Debug",
+    "JUnit.UserServiceTest.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Java/Lessons/PP_1_1_3-4_JDBC_Hibernate",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskJDBC" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8fa0a25c-b568-4548-8a40-24df8a60f13a" name="Changes" comment="" />
+      <created>1710600100728</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710600100728</updated>
+      <workItem from="1710600101736" duration="684000" />
+      <workItem from="1710605889964" duration="321000" />
+      <workItem from="1710606219567" duration="861000" />
+      <workItem from="1710607141321" duration="297000" />
+      <workItem from="1710607522303" duration="609000" />
+      <workItem from="1710615442637" duration="2955000" />
+      <workItem from="1710669881036" duration="65000" />
+      <workItem from="1710674988014" duration="160000" />
+      <workItem from="1710675158582" duration="1928000" />
+      <workItem from="1710679147156" duration="21945000" />
+      <workItem from="1710701748674" duration="1672000" />
+      <workItem from="1710703439431" duration="814000" />
+      <workItem from="1710708701950" duration="15000" />
+      <workItem from="1710769319938" duration="4585000" />
+      <workItem from="1710774180288" duration="14963000" />
+      <workItem from="1710793147387" duration="602000" />
+      <workItem from="1710846724102" duration="8035000" />
+      <workItem from="1710866012177" duration="14068000" />
+      <workItem from="1711027091616" duration="785000" />
+      <workItem from="1711032103784" duration="8716000" />
+      <workItem from="1711111859101" duration="217000" />
+      <workItem from="1711126933504" duration="602000" />
+      <workItem from="1711216631852" duration="2923000" />
+      <workItem from="1711272568039" duration="2655000" />
+      <workItem from="1711289736595" duration="11000" />
+      <workItem from="1711545549095" duration="1361000" />
+      <workItem from="1711917409671" duration="426000" />
+      <workItem from="1712252283839" duration="27000" />
+      <workItem from="1712253756763" duration="40000" />
+      <workItem from="1712253897863" duration="1868000" />
+      <workItem from="1712676591175" duration="932000" />
+      <workItem from="1712934364911" duration="1231000" />
+      <workItem from="1712936650589" duration="1225000" />
+      <workItem from="1713192998437" duration="305000" />
+      <workItem from="1713383664467" duration="844000" />
+      <workItem from="1713895330550" duration="72000" />
+      <workItem from="1714577596678" duration="694000" />
+      <workItem from="1714579144176" duration="368000" />
+      <workItem from="1714579882961" duration="172000" />
+      <workItem from="1714580392688" duration="4223000" />
+      <workItem from="1714654270825" duration="3904000" />
+      <workItem from="1716564118784" duration="3000" />
+      <workItem from="1716727721882" duration="1213000" />
+      <workItem from="1716742229694" duration="3050000" />
+      <workItem from="1717079582869" duration="584000" />
+    </task>
+    <task id="LOCAL-00001" summary="Рещил задачу: Практическая задача 1.1.4 Java pre-project. Практическая задача 1.1.2. Работа с базой данных c помощью JDBC.">
+      <option name="closed" value="true" />
+      <created>1710700775058</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710700775058</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Исправил замечания ментора от 18.03.2024">
+      <option name="closed" value="true" />
+      <created>1710774894601</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710774894601</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Исправил замечания ментора от 18.03.2024 (подправил вывод Юзеров)">
+      <option name="closed" value="true" />
+      <created>1710775541934</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710775541934</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Исправил замечания ментора от 18.03.2024 (подправил вывод Юзеров)">
+      <option name="closed" value="true" />
+      <created>1710775689933</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710775689933</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Исправил замечания ментора от 18.03.2024 (подправил вывод Юзеров)">
+      <option name="closed" value="true" />
+      <created>1710775802243</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710775802243</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Исправил замечания ментора от 18.03.2024 (добавил закрытие Connection и PreparedStatement)">
+      <option name="closed" value="true" />
+      <created>1710777397116</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710777397116</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Исправил замечания ментора от 18.03.2024 (добавил закрытие Connection и PreparedStatement)">
+      <option name="closed" value="true" />
+      <created>1710777516714</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710777516714</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Исправил проблему с регистром">
+      <option name="closed" value="true" />
+      <created>1710793419459</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1710793419459</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Исправил проблему с регистром">
+      <option name="closed" value="true" />
+      <created>1710793550313</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1710793550313</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Исправил проблему с регистром">
+      <option name="closed" value="true" />
+      <created>1710847942081</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1710847942082</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Практическая задача 1.1.5 Java pre-project. Практическая задача 1.1.3. Работа с базой данных c помощью Hibernate.">
+      <option name="closed" value="true" />
+      <created>1710879385188</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1710879385188</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Поправил замечания проверяющего ментора от 21.03.24">
+      <option name="closed" value="true" />
+      <created>1711035740491</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711035740491</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Поправил замечания проверяющего ментора от 21.03.24">
+      <option name="closed" value="true" />
+      <created>1711035817416</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711035817416</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Поправил объявление транзакций">
+      <option name="closed" value="true" />
+      <created>1711037155388</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1711037155388</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Поправил ошибки">
+      <option name="closed" value="true" />
+      <created>1711038458228</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1711038458228</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Добавил метод для получения имени таблицы">
+      <option name="closed" value="true" />
+      <created>1711039131400</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1711039131400</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Изменил способ получения имени таблицы">
+      <option name="closed" value="true" />
+      <created>1714584618174</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1714584618174</updated>
+    </task>
+    <task id="LOCAL-00018" summary="30.05.2024">
+      <option name="closed" value="true" />
+      <created>1717079833289</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1717079833289</updated>
+    </task>
+    <task id="LOCAL-00019" summary="30.05.2024">
+      <option name="closed" value="true" />
+      <created>1717079837144</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1717079837144</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Рещил задачу: Практическая задача 1.1.4 Java pre-project. Практическая задача 1.1.2. Работа с базой данных c помощью JDBC." />
+    <MESSAGE value="Исправил замечания ментора от 18.03.2024" />
+    <MESSAGE value="Исправил замечания ментора от 18.03.2024 (подправил вывод Юзеров)" />
+    <MESSAGE value="Исправил замечания ментора от 18.03.2024 (добавил закрытие Connection и PreparedStatement)" />
+    <MESSAGE value="Исправил проблему с регистром" />
+    <MESSAGE value="Практическая задача 1.1.5 Java pre-project. Практическая задача 1.1.3. Работа с базой данных c помощью Hibernate." />
+    <MESSAGE value="Поправил замечания проверяющего ментора от 21.03.24" />
+    <MESSAGE value="Поправил объявление транзакций" />
+    <MESSAGE value="Поправил ошибки" />
+    <MESSAGE value="Добавил метод для получения имени таблицы" />
+    <MESSAGE value="Изменил способ получения имени таблицы" />
+    <MESSAGE value="30.05.2024" />
+    <option name="LAST_COMMIT_MESSAGE" value="30.05.2024" />
+  </component>
+</project>
