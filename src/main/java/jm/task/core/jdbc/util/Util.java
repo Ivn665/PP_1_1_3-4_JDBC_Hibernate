@@ -20,8 +20,8 @@ public class Util {
 
     private static final String DB_DRIVER = "com.mysql.cj.jdbc.Driver";
     private static final String URL = "jdbc:mysql://localhost:3306/users_db_test";
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "2root!()root2";
+    private static final String USERNAME = System.getenv("DB_USERNAME");
+    private static final String PASSWORD = System.getenv("DB_PASSWORD");
 
     public static Connection getConnection() throws SQLException {
         Connection connection = null;

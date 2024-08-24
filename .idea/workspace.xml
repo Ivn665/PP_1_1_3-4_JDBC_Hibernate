@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fa0a25c-b568-4548-8a40-24df8a60f13a" name="Changes" comment="Удалил ветки">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskJDBC.iml" beforeDir="false" />
+    <list default="true" id="8fa0a25c-b568-4548-8a40-24df8a60f13a" name="Changes" comment="Мелкие исправления">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/util/Util.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +48,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -73,7 +75,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Java/Lessons/Kata Pre-project/PP_2_1_2_Spring_HelloWorld",
+    "last_opened_file_path": "C:/Java/Lessons/Kata Pre-project/PP_1_1_3-4_JDBC_Hibernate",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -96,7 +98,12 @@
       <module name="TaskJDBC" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="UserServiceTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <envs>
+        <env name="DB_USERNAME" value="root" />
+        <env name="DB_PASSWORD" value="2root!()root2" />
+      </envs>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -166,6 +173,13 @@
       <workItem from="1717080855585" duration="1479000" />
       <workItem from="1717236601453" duration="18000" />
       <workItem from="1719256029365" duration="166000" />
+      <workItem from="1719256371231" duration="26000" />
+      <workItem from="1722878261387" duration="626000" />
+      <workItem from="1723882116787" duration="23000" />
+      <workItem from="1724246523591" duration="608000" />
+      <workItem from="1724318508250" duration="760000" />
+      <workItem from="1724417588603" duration="2448000" />
+      <workItem from="1724425257436" duration="1736000" />
     </task>
     <task id="LOCAL-00001" summary="Рещил задачу: Практическая задача 1.1.4 Java pre-project. Практическая задача 1.1.2. Работа с базой данных c помощью JDBC.">
       <option name="closed" value="true" />
@@ -343,7 +357,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719256101805</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Мелкие исправления">
+      <option name="closed" value="true" />
+      <created>1719256385105</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1719256385105</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,6 +397,7 @@
     <MESSAGE value="30.05.2024" />
     <MESSAGE value="Слил все ветки" />
     <MESSAGE value="Удалил ветки" />
-    <option name="LAST_COMMIT_MESSAGE" value="Удалил ветки" />
+    <MESSAGE value="Мелкие исправления" />
+    <option name="LAST_COMMIT_MESSAGE" value="Мелкие исправления" />
   </component>
 </project>
